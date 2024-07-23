@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda"/>
+    <item
+        android:id="@+id/itemSOS"
+        android:enabled="true"
+        android:icon="@drawable/ic_cross"
+        android:title="SOS"/>
+    <item
+        android:id="@+id/itemProfile"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="Profil"/>
+</menu>
