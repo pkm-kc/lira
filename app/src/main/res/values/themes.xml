@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Lira" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <style name="Base.Theme.Lira" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/neutral</item>
+        <item name="android:fontFamily">@font/sfprodisplayregular</item>
+        <item name="android:statusBarColor">@color/primary</item>
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:fontFamily">@font/SFPRODISPLAYREGULAR</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
@@ -12,5 +15,6 @@
 
     <style name="ThemeOverlay.App.BottomNavigationView" parent="">
         <item name="colorSurfaceContainer">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#FFDCDC</item>
     </style>
 </resources>
