@@ -8,6 +8,7 @@ import id.my.mirzaa.lira.databinding.ActivityPatientBaseBinding
 class PatientBaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPatientBaseBinding
     private val patientHomeFragment = PatientHomeFragment()
+    private val patientSOSFragment = PatientSOSFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +18,8 @@ class PatientBaseActivity : AppCompatActivity() {
 
         binding.menuNavigation.setOnItemSelectedListener { item ->
             val selectedFragment = when (item.itemId) {
-                R.id.itemHome, R.id.itemSOS, R.id.itemProfile -> patientHomeFragment
+                R.id.itemHome -> patientHomeFragment
+                R.id.itemSOS -> patientSOSFragment
                 else -> null
             }
             selectedFragment?.let {

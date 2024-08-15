@@ -2,4 +2,6 @@
     <string name="app_name">Lira</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_applicable">N/A</string>
+    <string name="provider_package_name">com.google.android.apps.healthdata</string>
 </resources>

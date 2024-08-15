@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget"
+    android:elevation="2dp"
+    android:padding="12dp"
+    tools:context=".DailyCheckupUnavailableFragment">
+
+    <ImageView
+        android:id="@+id/imgSmartwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/img_smartwatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/sfprodisplaymedium"
+        android:text="Hubungkan dengan smartwatch\nuntuk mengakses"
+        android:textAlignment="center"
+        android:textColor="@color/neutral30"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgSmartwatch" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:paddingHorizontal="4dp"
+        android:text="Hubungkan"
+        app:backgroundTint="@color/secondary50"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWarning" />
+</androidx.constraintlayout.widget.ConstraintLayout>

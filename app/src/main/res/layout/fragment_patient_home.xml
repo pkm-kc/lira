@@ -7,7 +7,7 @@
     tools:context=".PatientHomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/clHeader"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/header"
@@ -84,580 +84,250 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideLeftGutter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRightGutter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <TextView
-        android:id="@+id/txtDailyCheckup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprodisplaybold"
-        android:text="Pemantauan Harian"
-        android:textColor="@color/neutral10"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/guideLeftGutter"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clDailyCheckup"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/widget"
-        android:elevation="2dp"
-        android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="@id/guidelineRightGutter"
-        app:layout_constraintStart_toStartOf="@id/guideLeftGutter"
-        app:layout_constraintTop_toBottomOf="@id/txtDailyCheckup">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clHeader">
 
-        <LinearLayout
-            android:id="@+id/llDailyCheckup"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:id="@+id/llDayMonday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDayMonday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Sen"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateMonday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="1"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDayTuesday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDayTuesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Sel"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateTuesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="2"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDayWednesday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDayWednesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Rab"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateWednesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="3"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDayThursday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDayThursday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Kam"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateThursday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="4"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDayFriday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDayFriday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Jum"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateFriday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="5"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDaySaturday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDaySaturday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Sab"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateSaturday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="6"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llDaySunday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvDaySunday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaybold"
-                    android:text="Min"
-                    android:textColor="@color/neutral30"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tvDateSunday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="7"
-                    android:textColor="@color/primary10"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/materialDivider"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:dividerColor="@color/secondary70"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/llDailyCheckup" />
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialDivider">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/txtDailyCheckup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:fontFamily="@font/sfprodisplaybold"
+                android:text="Pemantauan Harian"
+                android:textColor="@color/neutral10"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/txtHeartRate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Detak Jantung"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgHeartRate"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/heart_rate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txtHeartRate" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="70 bpm"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imgHeartRate" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fcDailyCheckup"
+                android:name="id.my.mirzaa.lira.DailyCheckupUnavailableFragment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDailyCheckup"
+                tools:layout="@layout/fragment_daily_checkup_unavailable" />
 
-                <TextView
-                    android:id="@+id/txtBloodPressure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Tekanan Darah"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgBloodPressure"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/blood_pressure"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txtBloodPressure" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="120/80"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imgBloodPressure" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/txtFootSteps"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Langkah Kaki"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgFootSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/foot_steps"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txtFootSteps" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3000 steps"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imgFootSteps" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/txtOurServices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprodisplaybold"
-        android:text="Layanan Kami"
-        android:textColor="@color/neutral10"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/guideLeftGutter"
-        app:layout_constraintTop_toBottomOf="@+id/clDailyCheckup" />
-
-    <LinearLayout
-        android:id="@+id/clOurServices"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/widget"
-        android:elevation="2dp"
-        android:paddingVertical="20dp"
-        app:layout_constraintEnd_toEndOf="@id/guidelineRightGutter"
-        app:layout_constraintStart_toStartOf="@id/guideLeftGutter"
-        app:layout_constraintTop_toBottomOf="@id/txtOurServices">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/containerMedicalRecord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMedicalRecord"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconSize="24dp"
-                    app:iconTint="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Medical\nRecord"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/containerBtnLifestyle"
+            <TextView
+                android:id="@+id/txtOurServices"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLifestyle"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconTint="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Gaya\nHidup"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+                android:fontFamily="@font/sfprodisplaybold"
+                android:text="Layanan Kami"
+                android:textColor="@color/neutral10"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fcDailyCheckup" />
 
             <LinearLayout
-                android:id="@+id/containerDailyReport"
-                android:layout_width="wrap_content"
+                android:id="@+id/clOurServices"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widget"
+                android:elevation="2dp"
+                android:paddingVertical="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtOurServices">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnDailyReport"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconTint="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Daily\nReport"
-                    android:textAlignment="center" />
-            </LinearLayout>
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/containerBtnArticle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/containerMedicalRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnArticle"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconTint="@null" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMedicalRecord"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_medical_record"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Medical\nRecord"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/containerBtnLifestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLifestyle"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_lifestyle"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Gaya\nHidup"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Artikel"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/containerDailyReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/containerSchedule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDailyReport"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_daily_report"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnDailySchedule"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconTint="@null" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Daily\nReport"
+                            android:textAlignment="center" />
+                    </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/containerBtnArticle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnArticle"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_article"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Artikel"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Jadwal\n"
-                    android:textAlignment="center" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/containerSchedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDailySchedule"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_schedule"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Jadwal\n"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/containerBtnQR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnQR"
+                            style="?attr/materialIconButtonFilledStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:theme="@style/ServiceButton"
+                            app:icon="@drawable/img_qr"
+                            app:iconGravity="textStart"
+                            app:iconSize="48dp"
+                            app:iconTint="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:text="Kode QR"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/containerBtnQR"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnQR"
-                    style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:theme="@style/ServiceButton"
-                    app:icon="@drawable/img_medical_record"
-                    app:iconTint="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplaymedium"
-                    android:text="Kode QR"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

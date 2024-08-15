@@ -7,6 +7,9 @@
     <color name="primary10">#FF7474</color>
     <color name="neutral10">#303031</color>
     <color name="neutral30">#929393</color>
+    <color name="secondary50">#FF5252</color>
     <color name="secondary60">#FF7474</color>
     <color name="secondary70">#FF9797</color>
+    <color name="secondary90">#FFDCDC</color>
+    <color name="secondary95">#FFEDEB</color>
 </resources>
