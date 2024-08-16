@@ -10,6 +10,7 @@ import androidx.health.connect.client.records.BloodPressureRecord
 import androidx.health.connect.client.records.ExerciseSessionRecord
 import androidx.health.connect.client.records.HeartRateRecord
 import androidx.health.connect.client.records.Record
+import androidx.health.connect.client.records.StepsCadenceRecord
 import androidx.health.connect.client.records.StepsRecord
 import androidx.health.connect.client.records.TotalCaloriesBurnedRecord
 import androidx.health.connect.client.records.WeightRecord
@@ -84,6 +85,14 @@ class HealthConnectManager(private val context: Context) {
         return response.records
     }
 
+    suspend fun readStepCadences(start: Instant, end: Instant): List<StepsCadenceRecord> {
+        val request = ReadRecordsRequest(
+            recordType = StepsCadenceRecord::class,
+            timeRangeFilter = TimeRangeFilter.between(start, end)
+        )
+        val response = healthConnectClient.readRecords(request)
+        return response.records
+    }
     /**
      * Obtains a changes token for the specified record types.
      */

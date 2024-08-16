@@ -3,14 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.health.READ_HEART_RATE" />
-    <uses-permission android:name="android.permission.health.WRITE_HEART_RATE" />
     <uses-permission android:name="android.permission.health.READ_BLOOD_PRESSURE" />
-    <uses-permission android:name="android.permission.health.WRITE_BLOOD_PRESSURE" />
     <uses-permission android:name="android.permission.health.READ_STEPS" />
-    <uses-permission android:name="android.permission.health.WRITE_STEPS" />
+
+    <queries>
+        <package android:name="com.google.android.apps.healthdata" />
+    </queries>
 
     <application
-        android:name="id.my.mirzaa.lira.BaseApplication"
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -21,11 +22,15 @@
         android:theme="@style/Base.Theme.Lira"
         tools:targetApi="31">
         <activity
+            android:name=".PatientDailyReportActivity"
+            android:exported="false" />
+        <activity
             android:name=".PatientBaseActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
@@ -33,8 +38,5 @@
             </intent-filter>
         </activity>
     </application>
-    <queries>
-        <package android:name="com.google.android.apps.healthdata" />
-    </queries>
 
 </manifest>

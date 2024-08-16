@@ -8,6 +8,8 @@
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
         <item name="appBarLayoutStyle">@style/Widget.App.AppBarLayout</item>
         <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.App.LinearProgressIndicator
+        </item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
@@ -33,5 +35,17 @@
 
     <style name="ThemeOverlay.App.Toolbar" parent="">
         <item name="colorControlNormal">@color/secondary50</item>
+    </style>
+
+    <style name="Widget.App.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.LinearProgressIndicator</item>
+        <item name="trackThickness">16dp</item>
+        <item name="trackCornerRadius">999dp</item>
+        <item name="trackColor">@color/neutral</item>
+        <item name="android:max">300</item>
+    </style>
+
+    <style name="ThemeOverlay.App.LinearProgressIndicator" parent="">
+        <item name="colorPrimary">@color/primary10</item>
     </style>
 </resources>

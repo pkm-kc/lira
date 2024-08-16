@@ -1,6 +1,5 @@
 package id.my.mirzaa.lira
 
-import android.content.ActivityNotFoundException
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -24,7 +23,7 @@ class DailyCheckupUnavailableFragment : Fragment() {
             (requireActivity().application as BaseApplication).healthConnectManager
         checkPermission =
             registerForActivityResult(healthConnectManager.requestPermissionsActivityContract()) { granted ->
-                if (granted.containsAll(permissions)) {
+                if (granted.containsAll(PERMISSIONS)) {
                     parentFragmentManager.beginTransaction()
                         .replace(R.id.fcDailyCheckup, DailyCheckupContentFragment())
                         .commit()
@@ -42,7 +41,7 @@ class DailyCheckupUnavailableFragment : Fragment() {
             if (healthConnectManager.availability.value != HealthConnectAvailability.INSTALLED) {
                 return@setOnClickListener
             }
-            checkPermission.launch(permissions)
+            checkPermission.launch(PERMISSIONS)
         }
     }
 }

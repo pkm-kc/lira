@@ -1,5 +1,6 @@
 package id.my.mirzaa.lira
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.health.connect.client.permission.HealthPermission
 import androidx.health.connect.client.records.BloodPressureRecord
 import androidx.health.connect.client.records.HeartRateRecord
+import androidx.health.connect.client.records.StepsCadenceRecord
 import androidx.health.connect.client.records.StepsRecord
 import com.google.android.material.snackbar.Snackbar
 import id.my.mirzaa.lira.databinding.FragmentPatientHomeBinding
@@ -16,10 +18,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-val permissions = setOf(
+val PERMISSIONS = setOf(
     HealthPermission.getReadPermission(HeartRateRecord::class),
     HealthPermission.getReadPermission(BloodPressureRecord::class),
     HealthPermission.getReadPermission(StepsRecord::class),
+    HealthPermission.getReadPermission(StepsCadenceRecord::class),
 )
 
 class PatientHomeFragment : Fragment() {
@@ -51,7 +54,7 @@ class PatientHomeFragment : Fragment() {
         CoroutineScope(Dispatchers.Main).launch {
             if (
                 healthConnectManager.availability.value == HealthConnectAvailability.INSTALLED
-                && healthConnectManager.hasAllPermissions(permissions)
+                && healthConnectManager.hasAllPermissions(PERMISSIONS)
             ) {
                 DailyCheckupContentFragment().let {
                     childFragmentManager.beginTransaction()
@@ -59,13 +62,8 @@ class PatientHomeFragment : Fragment() {
                         .commit()
                 }
                 binding.btnDailyReport.setOnClickListener {
-                    val fragment = PatientDailyReportFragment()
-                    fragment.let {
-                        parentFragmentManager.beginTransaction()
-                            .replace(R.id.fragmentContainerPatient, it)
-                            .addToBackStack("")
-                            .commit()
-                    }
+                    val intent = Intent(requireContext(), PatientDailyReportActivity::class.java)
+                    startActivity(intent)
                 }
             }
         }
