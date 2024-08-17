@@ -19,9 +19,7 @@ class PatientDailyReportActivity : AppCompatActivity() {
         setContentView(binding.root)
         healthConnectManager = (application as BaseApplication).healthConnectManager
 
-        binding.topAppBar.setNavigationOnClickListener {
-            finish()
-        }
+        binding.topAppBar.setNavigationOnClickListener { finish() }
 
         CoroutineScope(Dispatchers.Main).launch {
             val heartRates = healthConnectManager.readHearRates(Instant.EPOCH, Instant.now())

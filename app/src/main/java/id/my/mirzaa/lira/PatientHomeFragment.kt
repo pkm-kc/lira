@@ -61,13 +61,18 @@ class PatientHomeFragment : Fragment() {
                         .replace(R.id.fcDailyCheckup, it)
                         .commit()
                 }
-                binding.btnDailyReport.setOnClickListener {
-                    val intent = Intent(requireContext(), PatientDailyReportActivity::class.java)
-                    startActivity(intent)
-                }
             }
         }
 
+        binding.btnDailyReport.setOnClickListener {
+            val intent = Intent(requireContext(), PatientDailyReportActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnMedicalRecord.setOnClickListener {
+            val intent = Intent(requireContext(), MedicalRecordsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {

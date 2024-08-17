@@ -12,7 +12,6 @@ class PatientBaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
         binding = ActivityPatientBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

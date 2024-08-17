@@ -27,14 +27,16 @@
     </style>
 
     <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
         <item name="titleCentered">true</item>
         <item name="titleTextColor">@color/white</item>
         <item name="titleTextAppearance">@style/TopBarTitleText</item>
     </style>
 
-    <style name="ThemeOverlay.App.Toolbar" parent="">
-        <item name="colorControlNormal">@color/secondary50</item>
+
+    <style name="Widget.App.RoleToolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleCentered">true</item>
+        <item name="titleTextColor">@color/black</item>
+        <item name="titleTextAppearance">@style/TopBarTitleText</item>
     </style>
 
     <style name="Widget.App.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">

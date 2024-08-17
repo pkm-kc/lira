@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.ActivityResultLauncher
+import com.google.android.material.snackbar.Snackbar
 import id.my.mirzaa.lira.databinding.FragmentDailyCheckupUnavailableBinding
 
 class DailyCheckupUnavailableFragment : Fragment() {
@@ -39,6 +40,11 @@ class DailyCheckupUnavailableFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnConnect.setOnClickListener {
             if (healthConnectManager.availability.value != HealthConnectAvailability.INSTALLED) {
+                Snackbar.make(
+                    binding.btnConnect,
+                    "Perangkat tidak mendukung smartwatch",
+                    Snackbar.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
             checkPermission.launch(PERMISSIONS)
