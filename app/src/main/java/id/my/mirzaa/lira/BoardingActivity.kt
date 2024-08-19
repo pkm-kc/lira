@@ -18,9 +18,10 @@ class BoardingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSignUp.setOnClickListener {
-            Intent(this, RoleSelectionActivity::class.java).also {
-                startActivity(it)
-            }
+            Intent(this, SignUpActivity::class.java).also { startActivity(it) }
+        }
+        binding.btnSignIn.setOnClickListener {
+            Intent(this, PatientBaseActivity::class.java).also { startActivity(it) }
         }
     }
 }

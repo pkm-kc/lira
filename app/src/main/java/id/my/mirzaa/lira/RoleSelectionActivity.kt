@@ -1,5 +1,6 @@
 package id.my.mirzaa.lira
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.my.mirzaa.lira.databinding.ActivityRoleSelectionBinding
@@ -12,5 +13,8 @@ class RoleSelectionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.topAppBar.setNavigationOnClickListener { finish() }
+        binding.clRolePatient.setOnClickListener {
+            Intent(this, ProfileSetupActivity::class.java).also { startActivity(it) }
+        }
     }
 }

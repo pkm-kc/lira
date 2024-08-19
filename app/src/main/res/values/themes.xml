@@ -32,7 +32,6 @@
         <item name="titleTextAppearance">@style/TopBarTitleText</item>
     </style>
 
-
     <style name="Widget.App.RoleToolbar" parent="Widget.Material3.Toolbar">
         <item name="titleCentered">true</item>
         <item name="titleTextColor">@color/black</item>
@@ -44,6 +43,14 @@
         <item name="trackThickness">16dp</item>
         <item name="trackCornerRadius">999dp</item>
         <item name="trackColor">@color/neutral</item>
+        <item name="android:max">300</item>
+    </style>
+
+    <style name="Widget.App.ProfileSetupStepper" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.LinearProgressIndicator</item>
+        <item name="trackThickness">4dp</item>
+        <item name="trackCornerRadius">999dp</item>
+        <item name="trackColor">@color/neutral30</item>
         <item name="android:max">300</item>
     </style>
 

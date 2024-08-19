@@ -22,6 +22,15 @@
         android:theme="@style/Base.Theme.Lira"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileSetupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".RoleSelectionActivity"
             android:exported="false" />
         <activity
